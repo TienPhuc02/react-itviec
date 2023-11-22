@@ -152,7 +152,7 @@ const ModalCompany = (props: IProps) => {
         const res = await callUploadSingleFile(file, "company");
         if (res && res.data) {
             setDataLogo([{
-                name: res.data.fileName,
+                name: res.data.file,
                 uid: uuidv4()
             }])
             if (onSuccess) onSuccess('ok')

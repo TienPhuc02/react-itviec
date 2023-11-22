@@ -56,8 +56,9 @@ const ApplyModal = (props: IProps) => {
         accept: "application/pdf,application/msword, .doc, .docx, .pdf",
         async customRequest({ file, onSuccess, onError }: any) {
             const res = await callUploadSingleFile(file, "resume");
+            console.log("🚀 ~ file: apply.modal.tsx:59 ~ customRequest ~ res:", res)
             if (res && res.data) {
-                setUrlCV(res.data.fileName);
+                setUrlCV(res.data.file);
                 if (onSuccess) onSuccess('ok')
             } else {
                 if (onError) {
