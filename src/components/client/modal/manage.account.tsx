@@ -42,7 +42,7 @@ const UserResume = (props: any) => {
     const init = async () => {
       setIsFetching(true);
       const res = await callFetchResumeByUser();
-      console.log("🚀 ~ file: manage.account.tsx:26 ~ init ~ res:", res.data);
+      console.log("🚀 ~ file: manage.account.tsx:26 ~ init ~ res:", res);
       if (res && res.data) {
         setListCV((prevList) => {
           const cvArray = Array.isArray(res.data) ? res.data : [res.data];
